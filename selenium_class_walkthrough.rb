@@ -15,4 +15,12 @@ class QaToolsForm
   def input_firstname_field(text)
     @chrome_driver.find_element(:name, FIRST_NAME_FIELD_NAME).send_keys(text)
   end
+
+  def input_firstname_field_value
+    @chrome_driver.find_element(:name, FIRST_NAME_FIELD_NAME)['value']
+  end
+
+  def current_url
+    @chrome_driver.current_url
+  end
 end
