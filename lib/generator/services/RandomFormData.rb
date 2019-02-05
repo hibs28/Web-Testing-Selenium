@@ -9,4 +9,8 @@ class RandomFormData
   def last_name
     Name.last_name
   end
+
+  def date
+    Date.birthday(18, 65)  
+  end
 end
