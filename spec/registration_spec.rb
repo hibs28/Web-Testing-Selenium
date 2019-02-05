@@ -30,5 +30,18 @@ describe 'testing the demoqa automation form' do
       @driver.input_date_field(@date)
       expect(@driver.input_date_field_value).to eql @date
     end
+
+    it 'should select a sex' do
+      number = rand(0..1)
+      @driver.input_sex(number)
+      expect(@driver.input_sex_checked(number)).to be_truthy
+    end
+
+    it 'should select a year of experience' do
+      number = rand(0..6)
+      @driver.input_year_experience(number)
+      expect(@driver.input_year_experience_checked(number)).to be_truthy
+    end
+
   end
 end
