@@ -1,7 +1,12 @@
-require_relative './service/random_form_generator'
+require_relative './services/RandomPostcodes'
+require_relative './services/RandomFormData'
 
 class Generator
-  def random_details
-    RandomFormDataGenerator.new
+  def postcodes
+    RandomPostcodes.new
+  end
+
+  def form_data
+    RandomFormData.new
   end
 end
