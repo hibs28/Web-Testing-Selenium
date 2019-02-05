@@ -4,6 +4,6 @@ require 'faker'
 require_relative '../Generator'
 
 RSpec.configure do |config|
-config.formatter = :documentation
-config.color = true
+  config.formatter = :documentation
+  config.color = true
 end
