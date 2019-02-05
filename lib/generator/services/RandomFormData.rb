@@ -11,6 +11,6 @@ class RandomFormData
   end
 
   def date
-    Date.birthday(18, 65)  
+    Date.birthday(0, 65)  
   end
 end

@@ -6,6 +6,7 @@ describe 'testing the demoqa automation form' do
   @driver.visit_practice_form
   @first_name = Generator.new.form_data.first_name
   @last_name = Generator.new.form_data.last_name
+  @date = Generator.new.form_data.date.to_s
   @url = 'https://www.toolsqa.com/automation-practice-form/'
   end
 
@@ -16,13 +17,18 @@ describe 'testing the demoqa automation form' do
     end 
 
     it 'should accept a first name' do
-      @driver.input_firstname_field(@name)
-      expect(@driver.input_firstname_field_value).to eql @name
+      @driver.input_firstname_field(@first_name)
+      expect(@driver.input_firstname_field_value).to eql @first_name
     end
 
     it 'should accept a last name' do
-      @driver.input_firstname_field(@name)
-      expect(@driver.input_lastname_field_value).to eql @name
+      @driver.input_lastname_field(@last_name)
+      expect(@driver.input_lastname_field_value).to eql @last_name
+    end
+
+    it 'should accept a date' do
+      @driver.input_date_field(@date)
+      expect(@driver.input_date_field_value).to eql @date
     end
   end
 end
