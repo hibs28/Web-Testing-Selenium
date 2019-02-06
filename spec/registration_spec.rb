@@ -42,6 +42,5 @@ describe 'testing the demoqa automation form' do
       @driver.input_year_experience(number)
       expect(@driver.input_year_experience_checked(number)).to be_truthy
     end
-
   end
 end

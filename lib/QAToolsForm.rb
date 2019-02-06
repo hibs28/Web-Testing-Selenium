@@ -45,12 +45,16 @@ class QaToolsForm
     @chrome_driver.find_elements(:name, SEX_RADIO_BUTTON_NAME)[number]['checked']
   end
 
+  def input_year_experience_array
+    @chrome_driver.find_elements(:name, YEAR_EXPERIENCE_RADIO_BUTTON_NAME)
+  end
+
   def input_year_experience(number)
-    @chrome_driver.find_elements(:name, YEAR_EXPERIENCE_RADIO_BUTTON_NAME)[number].click
+    input_year_experience_array[number].click
   end
 
   def input_year_experience_checked(number)
-    @chrome_driver.find_elements(:name, YEAR_EXPERIENCE_RADIO_BUTTON_NAME)[number]['checked']
+    input_year_experience_array[number]['checked']
   end
 
   def input_date_field(date)
@@ -60,6 +64,5 @@ class QaToolsForm
   def input_date_field_value
     @chrome_driver.find_element(:id, DATE_FIELD_NAME)['value']
   end
-
 end
 
